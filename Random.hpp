@@ -18,7 +18,7 @@ public:
     template <typename T = double>
     static T genReal(T min, T max) {
 		if (min > max) {
-			std::uniform_real_distribution<T> dist(min, max);
+			std::uniform_real_distribution<T> dist(max, min);
 			return dist(gen);
 		} else {
 			std::uniform_real_distribution<T> dist(min, max);
