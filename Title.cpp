@@ -1,9 +1,11 @@
 #include "Title.hpp"
 
 Title::Title() {
-    assert(texture.loadFromFile("assets/images/Title.png"));
+	if (!texture.loadFromFile("assets/images/Title.png"))
+		throw std::runtime_error(no_asset);
     sprite.setTexture(texture);
-    assert(font.loadFromFile("assets/fonts/AnonymousPro-Regular.ttf"));
+	if (!font.loadFromFile("assets/fonts/AnonymousPro-Regular.ttf"))
+		throw std::runtime_error(no_asset);
     punt_max_text.setFont(font);
     punt_max_text.setPosition(Marcador::POS_X, Marcador::POS_Y);
     punt_max_text.setFillColor(sf::Color::Black);

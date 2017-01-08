@@ -9,5 +9,6 @@ extern bool paused;
 extern bool show_title;
 // Si és -1, no s'ha jugat
 extern int puntuacio_mes_alta;
+extern const char* no_asset;
 
 #endif // COMMON_HPP

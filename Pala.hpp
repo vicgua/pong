@@ -2,6 +2,7 @@
 #define PALA_HPP
 
 #include <SFML/Graphics.hpp>
+#include <stdexcept>
 
 #include "common.hpp"
 

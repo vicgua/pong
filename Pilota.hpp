@@ -3,7 +3,8 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include <cmath>
+#define _USE_MATH_DEFINES // Requerit a Windows
+#include <math.h>
 
 #include <chrono>
 #include <random>

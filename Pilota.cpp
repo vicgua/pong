@@ -3,7 +3,8 @@
 Pilota::Pilota(Marcador* marcador) {
     shape = new sf::CircleShape(RADI);
     shape->setFillColor(sf::Color(51, 204, 51));
-    assert(s_buffer.loadFromFile("assets/sounds/pong.wav"));
+	if (!s_buffer.loadFromFile("assets/sounds/pong.wav"))
+		throw std::runtime_error(no_asset);
     sound.setBuffer(s_buffer);
     this->marcador = marcador;
     ultima_col = NO;
@@ -41,7 +42,7 @@ void Pilota::move(const Pala& jugador) {
     if (Random::genBool(0.01)) { // Canvia de velocitat ocasionalment
         double v = sqrt(vx * vx + vy * vy);
         double angle = normRad(atan2(vy, vx));
-        double a = Random::genReal(1.2 * A, -A); // Accelera més que frena
+		double a = Random::genReal(1.2 * A, -A); // Accelera més que frena
         if (v + a <= V_MAX && v + a >= V_0) {
             v += a;
             vx = v * cos(angle);
