@@ -14,7 +14,7 @@ bool paused;
 bool show_title;
 int puntuacio_mes_alta;
 const char* no_asset = "No s'ha pogut carregar un arxiu. Assegura't que "
-	"`assets` està al mateix directori que l'executable";
+        "`assets` està al mateix directori que l'executable";
 
 std::default_random_engine Random::gen;
 

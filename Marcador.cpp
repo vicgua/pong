@@ -4,10 +4,10 @@ Marcador::Marcador(bool videsInf) {
     this->vides_inf = videsInf;
     vides = VIDES_INICIALS;
     punts = 0;
-	if (!font.loadFromFile("assets/fonts/AnonymousPro-Regular.ttf"))
-		throw std::runtime_error(no_asset);
-	if (!font_bold.loadFromFile("assets/fonts/AnonymousPro-Bold.ttf"))
-		throw std::runtime_error(no_asset);
+    if (!font.loadFromFile("assets/fonts/AnonymousPro-Regular.ttf"))
+        throw std::runtime_error(no_asset);
+    if (!font_bold.loadFromFile("assets/fonts/AnonymousPro-Bold.ttf"))
+        throw std::runtime_error(no_asset);
     t_punts.setFont(font);
     t_punts.setPosition(POS_X, POS_Y);
     t_punts.setFillColor(sf::Color::Black);
